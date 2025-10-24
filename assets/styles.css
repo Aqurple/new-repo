@@ -1,0 +1,108 @@
+:root {
+    --color-pink: #FE41FE;
+    --color-link: #8000FF;
+    --color-bright: #FFF2FF;
+    --color-dark: #000000;
+    --color-background: #0d0034;
+}
+
+@font-face {
+    font-family: "Neogrey Regular";
+    src: url("Neogrey Regular.ttf") format("ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* reset */
+html {
+    height: 100%;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    background: var(--color-background);
+    cursor: none;
+}
+
+a {
+    color: var(--color-dark);
+    text-decoration: none;
+}
+
+/* main elements */
+.visual {
+    mix-blend-mode: color-dodge;
+    background-color: var(--color-bright);
+    box-shadow:
+        0 0 250px 0 var(--color-pink),
+        0 0 250px 0 var(--color-pink),
+        0 0 168px 0 var(--color-pink),
+        0 0 84px 0 var(--color-bright),
+        0 0 24px 0 var(--color-bright),
+        0 0 12px 0 var(--color-bright);
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.cursor {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+    mix-blend-mode: plus-lighter;
+    pointer-events: none;
+    transition: 0, 1s;
+    transform: translate(-50%, -50%);
+}
+
+.author {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    mix-blend-mode: color-dodge;
+    color: var(--color-bright);
+    text-shadow:
+        0 0 250px 0 var(--color-pink),
+        0 0 250px 0 var(--color-pink),
+        0 0 168px 0 var(--color-pink),
+        0 0 84px 0 var(--color-bright),
+        0 0 24px 0 var(--color-bright),
+        0 0 12px 0 var(--color-bright);
+    font-family:
+        Neogrey Regular,
+        Ubuntu,
+        Oxygen,
+        Segoe UI,
+        Arial,
+        sans-serif;
+    font-size: 2.5rem;
+    cursor: none;
+    transition: color 0.3s ease-in;
+}
+
+.author:hover {
+    color: var(--color-link);
+}
